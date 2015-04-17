@@ -1,0 +1,72 @@
+<html>
+<head>
+<script  src="Dice.js" ></script>
+
+<script>
+
+
+
+window.addEventListener("load", canvasApp, false);
+ function canvasApp(){
+	
+	var theCanvas = document.getElementById('canvasOne');
+		var context = theCanvas.getContext("2d");
+ drawScreen();
+	function drawScreen() {
+	//background
+		context.fillStyle = "#0066FF"
+	context.fillRect(0,0,500,300);
+	//text
+	context.fillStyle = "#000000";
+	context.font = "20px_sans";
+	context.textBaseLine = "top";
+	context.fillText("Wazzup!",195,80);
+	
+context.textBaseLine = "top";
+	context.fillText(rollOne,300,200);
+	
+	//images
+	var paviImage = new Image();
+	paviImage.src = "pavithepotato.png";
+	paviImage.onload = function(){
+	context.drawImage(paviImage, 160,130);
+	}
+	//box
+	context.strokeStyle = "#000000";
+	context.strokeRect(5,5,490,290);
+	
+
+	
+	}//end drawscreen 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ }//end canvas
+
+
+</script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+<canvas id="canvasOne" width="500" height="300">
+
+</canvas>
+</body>
+<script>
+var d20 = new Dice( 20 );
+var rollOne = d20.roll();
+
+</script>
+</html>
